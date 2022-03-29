@@ -6,7 +6,8 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
@@ -17,20 +18,19 @@ body {
     background-image: url("Background.png");
     background-position: right;
     background-repeat: no-repeat;
-    height: 680px;
+    height: 75vh;
     color: white;
-    width: 1440px;
+    width: 70vw;
     margin: auto;
 }
 
 .container-banner {
     display: flex;
     flex-direction: column;
-    width: 588px;
+    max-width: 588px;
     align-items: center;
     font-family: 'Inter', sans-serif;
     padding-top: 125px;
-    margin-left: 54px;
 }
 
 .container-banner h2 {
@@ -75,26 +75,26 @@ body {
     color: white;
     font-family: 'Inter', sans-serif;
     margin: 95px auto 0;
-    width: 1440px;
+    width: 80vw;
     align-items: center;
 }
 
 #img-plataforma {
-    width: 498px;
+    max-width: 498px;
 }
 
 .container-plataforma {
-    width: 588px;
+    max-width: 588px;
 }
 
 .container-plataforma h1{
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3rem;
 }
 
 .container-plataforma p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     color:#F9F9F9;
     line-height: 150%;
 }
@@ -106,31 +106,32 @@ body {
     justify-content: space-evenly;
     color: white;
     align-items: center;
-    width: 1440px;
+    width: 80vw;
     margin: 151px auto 0;
     font-family: 'Inter', sans-serif;
+    text-align: justify;
 }
 
 .container-telas {
-    width: 588px;
+    max-width: 588px;
 }
 
 .container-telas p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     color: #F9F9F9;
     line-height: 150%;
 }
 
 #img-telas {
-    width: 496px;
+    max-width: 496px;
 }
 
 .container-telas button {
     background: #167BF7;
     border-radius: 8px;
     height: 56px;
-    font-size: 16px;
+    font-size: 1rem;
     color: white;
     padding: 16px;
     margin-top: 32px;
@@ -143,27 +144,27 @@ body {
     justify-content: space-evenly;
     color: white;
     align-items: center;
-    width: 1440px;
+    width: 80vw;
     font-family: 'Inter', sans-serif;
     margin: 226px auto 0;
 }
 
 #img-notebook {
-    width: 547px;
+    max-width: 547px;
 }
 
 .container-notebook {
-    width: 588px;
+    max-width: 588px;
 }
 
 .container-notebook h1 {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3rem;
 }
 
 .container-notebook p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     color: #F9F9F9;
     line-height: 150%;
 }
@@ -172,18 +173,18 @@ body {
 
 .dispositivos {
     font-family: 'Inter', sans-serif;
-    width: 1440px;
+    width: 80vw;
     text-align: center;
     color: white;
-    margin: 264px auto 0;
-    font-size: 40px;
+    margin: 200px auto 0;
+    font-size: 2.5rem;
 }
 
 .container-dispositivos {
     display: flex;
     justify-content: space-evenly;
     margin-top: 40px;
-    font-size: 25px;
+    font-size: 1.7rem;
 }
 
 /*-----------------------FIM DA SECTION 5-----------------------*/
@@ -203,7 +204,7 @@ footer img {
 footer li {
     display: inline-block;
     margin-right: 16px;
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 24px;
 }
 
@@ -213,11 +214,52 @@ footer a {
 }
 
 footer p {
-    font-size: 14px;
+    display: block;
+    font-size: 0.9rem;
     color: #C0C0C0;
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 /*-----------------------FIM DO FOOTER-----------------------*/
+
+@media screen and (max-width: 1200px) {
+    .plataformas , .telas , .notebook {
+        display: block;
+        text-align: center;
+    }
+    .container-plataforma , .container-telas , .container-notebook {
+        margin: 25px auto;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .container-dispositivos {
+        flex-wrap: wrap;
+    }
+    .container-banner {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .container-banner button {
+        width: 50vw;
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    #img-plataforma , #img-telas , #img-notebook {
+        object-fit: cover;
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 715px) {
+    #alura-combo {
+        width: 60vw;
+    }
+}
